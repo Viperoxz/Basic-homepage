@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 html{
+  scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Common */
@@ -257,6 +258,7 @@ html{
   /* Enemies */
   .enemies-list{
     margin: 32px 18px 0;
+    padding: 64px 0 112px;
   }
   .enemies-item{
     float: left;
@@ -521,6 +523,31 @@ html{
   height: 100%;
   transition-delay: 0.4s;
   color: aliceblue;
+}
+
+.map-section img{
+  width: 100%;
+}
+
+/* Footer */
+#footer{
+  padding: 64px 16px;
+  text-align: center;
+}
+#footer .social-list{
+  font-size: 24px;
+}
+#footer .social-list a{
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+#footer .social-list a:hover{
+  color: rgba(152, 12, 12, 0.749);
+  cursor: pointer;
+}
+#footer .copyright{
+  margin-top: 15px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 
