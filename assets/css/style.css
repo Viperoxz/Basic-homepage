@@ -7,16 +7,49 @@
 html{
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Common */
 .text-white{
   color: #fff !important;
+}
+.pull-right{
+  float: right !important;
 }
 .clear{
   clear:both;
 }
- 
+.row{
+  margin-left: -8px;
+  margin-right: -8px;
+}
+.row::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.col{
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.col-third{
+  width: calc(100%/3);
+}
+.col-half{
+  width: 50%;
+}
+.col-full{
+  width: 100%;
+}
+.mt-8{
+  margin-top: 8px !important;
+}
+.mt-16{
+  margin-top: 16px !important;
+}
 
   /* Từ ngoài vào trong, từ trên xuống dưới, tổng quan đến chi tiết */
   
+  /* Main */
   #wrapper{
 
   }
@@ -137,7 +170,7 @@ html{
     width: 800px;
     margin-left: auto;
     margin-right: auto;
-    padding: 64px 0;
+    padding: 64px 0 112px;
   }
 
   #content .section-heading{
@@ -197,10 +230,21 @@ html{
     margin-right: 5%;
   }
   .ticket-list .sold-out{
-
+    background-color: #f4436f;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
   }
   .ticket-list .quantity-avai{
-
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: greenyellow;
+    color: #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -2px;
   }
   .ticket-list li{
     color:darkslategrey;
@@ -212,7 +256,7 @@ html{
 
   /* Enemies */
   .enemies-list{
-    margin: 32px -8px 0;
+    margin: 32px 18px 0;
   }
   .enemies-item{
     float: left;
@@ -306,10 +350,6 @@ html{
       transform: translate3d(100%, 0, 0);
      }
 
-  #footer{
-
-  }
-
   .modal.open{
     display: flex;
   }
@@ -402,3 +442,85 @@ html{
     transform: translateY(0);
   }
 }
+
+/* contact form */
+.contact-content{
+  margin-top: 48px;
+}
+.contact-info{
+  font-size: 16px;
+  line-height: 1.5;
+}
+.contact-info i[class*="ti-"] {
+  width:30px; 
+  display: inline-block;
+}
+.contact-form{
+  font-size: 15px;
+}
+.contact-form .form-control{
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+/* .contact-form .form-submit-btn{
+  float: right;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 10px 16px;
+} */
+.contact-form .form-submit-btn {
+  font-size: 15px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: darkred;
+  text-transform: uppercase;
+  position: relative;
+  transition: .5s ease;
+  float: right;
+  margin-top: 8px;
+  padding: 10px 16px;
+}
+
+.contact-form .form-submit-btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffc506;
+  transition: .5s ease;
+}
+
+.contact-form .form-submit-btn:hover {
+  color: #ffc506;
+  transition-delay: .5s;
+  cursor: pointer;
+}
+
+.contact-form .form-submit-btn:hover::before {
+  width: 100%;
+}
+
+.contact-form .form-submit-btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #000;
+  transition: .4s ease;
+  z-index: -1;
+}
+
+.contact-form .form-submit-btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+
+
